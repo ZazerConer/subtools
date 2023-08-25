@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="SubTools">
+    <meta name="description" content="Edit-Remove-Change Subtitles or Captions">
+    <meta name="keywords" content="subtitle, caption, text, srt, vtt, ssa, usf, sub, {\an8}, subrip, webvtt, edit, remove, change, embed, video, player">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <link rel="icon" href="https://i.imgur.com/DLD1t72.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://i.imgur.com/DLD1t72.png">
+    <title>SubTools | Subtitles Edit/Remove/Change</title>
+    
+    <style>
+      *,::after,::before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*{outline:0;border:0;padding:0;margin:0;user-select:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;text-decoration:none;cursor:none}html{font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent;scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media (any-pointer:coarse){html{-webkit-tap-size:4;-moz-tab-size:4;-ms-tap-size:4;-o-tab-size:4;tab-size:4}}.header,body{width:100vw;align-items:center}body{min-height:100vh;text-align:center;font-family:Verdana,Arial,sans-serif;display:grid;justify-content:center;background:#222;color:#fff;overscroll-behavior:contain}.header{margin:auto;padding:5px 20px;display:flex}.logo-site{width:50px;height:50px}.header small{font-weight:500;font-style:italic;margin-left:15px}.header button{position:absolute;right:5vw;font-size:45px;font-weight:300;color:#fff;background:0 0;-webkit-transition:all .2s linear;transition:all .2s linear;opacity:0;visibility:hidden}.header button:hover{opacity:.8}.header button:active{transform:scale(.9)}.logo-page{width:65vw;margin:auto;padding:20px 0;opacity:1;visibility:visible;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out}.logo-page:active{cursor:pointer}h2{color:#fafafa;margin-top:25px}.label{text-align:left;margin-left:3vw;margin-bottom:5px;white-space:nowrap;font-size:medium;font-weight:500}.label-tag{width:100%;height:25px;display:flex;place-items:center;white-space:nowrap;background:#555;margin:auto}.label-tag #content-desc{position:absolute;right:5vw;font-weight:600;text-shadow:0 1px #222}#home,.btn-section{place-items:center;place-content:center}#home{display:flex;-webkit-flex-direction:column;-moz-flex-direction:column;flex-direction:column;visibility:hidden}.btn-section{width:75vw;height:35vw;padding:10px;display:grid;margin:10px;border-radius:10px;font-size:large;font-weight:700;text-shadow:0 1px #333;background:linear-gradient(130deg,#2979ff,#00b0ff,#29b6f6);-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out}.btn-section:hover{box-shadow:0 0 0 3px #18ffff}.btn-section:active{cursor:pointer}#home,.container-textarea{width:100vw;height:100vh;color:#fff;padding:15px;margin-bottom:100px;overflow:auto}.container-textarea{display:grid}.text-edit{width:100%;height:70vh;border:1.5px solid #1e90ff;border-radius:3px;padding:20px 15px;white-space:nowrap;line-height:1.2;text-align:left;overflow:auto}.text-edit::-webkit-scrollbar{height:5px;width:5px}.text-edit::-webkit-scrollbar-track{background:#999}.text-edit::-webkit-scrollbar-thumb{background-image:radial-gradient(90% 100%at 100%0,#5adaff 0,#5468ff 100%)}.text-change,.text-remove{width:100%;height:35vh;border:1.5px solid #1e90ff;border-radius:3px;padding:20px 15px;white-space:nowrap;line-height:1.2;text-align:left;overflow:auto}.text-remove::-webkit-scrollbar{height:5px;width:5px}.text-remove::-webkit-scrollbar-track{background:#999}.text-remove::-webkit-scrollbar-thumb{background-image:radial-gradient(90% 100%at 100%0,#5adaff 0,#5468ff 100%)}#output,#output-change{color:#0d47a1}.text-change::-webkit-scrollbar{height:5px;width:5px}.text-change::-webkit-scrollbar-track{background:#999}.text-change::-webkit-scrollbar-thumb{background-image:radial-gradient(90% 100%at 100%0,#5adaff 0,#5468ff 100%)}#remove,.btnClick{display:none;border-radius:4px;color:#222;text-shadow:0 1px #fff;font-weight:500;background:#e0e0e0;-webkit-transition:all .2s linear;transition:all .2s linear}.btnClick{width:auto;height:30px;padding:8px 12px}#change:active,#info:active,#remove:active,.btnClick:active{color:#222;background:#888;text-shadow:none}.btnClick,.clear,.copy{position:fixed;bottom:5vw;right:5vw}.clear{right:20vw}#remove{padding:5px 10px;visibility:hidden;opacity:0}#change,#remove,.cont-change,.search-text{align-items:center;justify-content:center}#change{padding:5px 10px;display:inline-block;border-radius:4px;color:#222;text-shadow:0 1px #fff;font-weight:500;background:#e0e0e0;visibility:visible;opacity:1;-webkit-transition:all .2s linear;transition:all .2s linear}.cont-change,.search-text{display:flex}.cont-change{width:100vw;flex-derection:row;margin:auto}.search-text{width:50vw;padding:5px 10px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-radius:4px;-webkit-transition:all .2s linear;transition:all .2s linear}.search-text:focus{box-shadow:0 0 0 2px #1e90ff}::selection{color:#fff;background:#1e90ff;padding:3px}.input-file{position:relative;left:5vw;width:200px;height:30px;background:0 0}#tooltip{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);border-width:5px;color:#fff;text-align:center;font-weight:500;border-radius:6px;padding:8px 12px;visibility:hidden;z-index:1;opacity:0;-webkit-transition:opacity .3s;transition:opacity .3s;background:#1976d2}.footer{position:static;margin-top:auto;padding:30px 0}.btn-rig{-webkit-transition:all .3s linear;transition:all .3s linear}.btn-rig:hover{opacity:.6}.btn-rig:active{cursor:pointer}.active{color:#18ffff;text-decoration:underline}@media screen and (min-width:800px){.logo-page{width:35vw}#home,.container-textarea{display:flex;-webkit-flex-direction:row;-moz-flex-direction:row}.container-textarea{white-space:nowrap;place-items:center;justify-content:center}#home{flex-direction:row;justify-content:space-around}.btn-section{width:25vw;height:18vw}.text-edit{width:60vw;height:70vh;margin:auto}.text-change,.text-remove{width:45vw;height:70vh;margin:10px}.label{text-align:center;margin:auto}.clear,.copy{position:fixed;top:10vw;right:5vw}.clear{right:13vw}.input-file{position:absolute;top:320px;left:5vw}.search-text{width:27vw}}#info{float:right;margin-right:5vw;padding:3px 8px;align-items:center;justify-content:center;border-radius:3px;color:#222;text-shadow:0 1px #fff;font-weight:400;background:#e0e0e0;-webkit-transition:all .2s linear;transition:all .2s linear}#usage-code{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);padding:30px 20px;text-align:left;line-height:1.6;color:#fff;border-radius:6px;background:#444;box-shadow:0 0 0 100000px rgba(0,0,0,.5);visibility:hidden;opacity:0;-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out}#usage-code b code{color:#18ffff;text-shadow:0 1px #111}#close-div{position:absolute;top:0;right:0;padding:10px 20px;font-size:25px;color:#fff;background:0 0}@media screen and (min-width:800px){#usage-code{padding:30px}}
+    </style>
+</head>
+
+<body data-href="#">
+    <div class="header" id="top">
+        <img class="logo-site" src="https://iili.io/HpZgz2R.webp" alt="subtools-logo-site"><small>Free Online Tools - Subtitles/Captions</small>
+        <button id="click-home">&times;</button>
+    </div>
+    <img class="logo-page" id="logo-home" src="https://iili.io/HpZgqLg.png" alt="subtools-logo">
+        <br>
+    <h3><span id="section" style="display:none;"><span id="btn-home" class="btn-rig active">Home</span>&nbsp; › &nbsp; <span id="section-content"></span>&nbsp; › &nbsp; <code id="section-title" style="font-weight:700;"></code></span></h3>
+	    <br>
+	    <br>
+    <div class="label-tag"><span id="content-desc">Edit-Remove-Change</span></div>
+	    <br>
+	    <br>
+	    <br>
+    <span id="content-pr">
+	    <span id="code-edit" style="display:none;">Edit Anything » &nbsp;<b><code>Text, Code, Characters.. etc.</code></b></span>
+	    <span id="code-remove" style="display:none;">Remove Parentheses Code » &nbsp;<b><code>{\an4}, {\an5}, {\an8}..</code></b></small></span>
+	    <span id="code-change" style="display:none;">Change Code » &nbsp; <b><code>{\an4}, {\an5}, {\an8}..</code></b></span>
+    </span>
+	    <br>
+	    <br>
+    <div id="home">
+        <div id="section-edit" class="btn-section">EDIT
+            <br>
+            <br>
+           <small>Edit Subs/Caps › &nbsp;<b><code>Text - Code - Characters</code></b></small>
+        </div>
+        <div id="section-remove" class="btn-section">REMOVE
+            <br>
+            <br>
+           <small>Remove Code › &nbsp;<b><code>{\an4}, {\an5}, {\an8}..</code></b></small>
+        </div>
+        <div id="section-change" class="btn-section">CHANGE
+            <br>
+            <br>
+           <small>Change Code › &nbsp;<b><code>{\an4}, {\an5}, {\an8}..</code></b></small>
+        </div>
+        <div id="section-translate" class="btn-section">TRANSLATOR
+            <br>
+            <br>
+           <small>Translate to Your Language</small>
+        </div>
+    </div>
+    <div id="edit-section" style="display:none;">
+        <div class="container-textarea">
+            <input class="input-file" id="input-file-edit" type="file">
+            <div>
+                <h3 class="label" id="text-input"></h3>
+                <textarea class="text-edit" type="text" id="input-edit" placeholder="Enter subs text here.."></textarea>
+            </div>
+            <button class="btnClick copy" id="copy-edit">Copy</button>
+            <button class="btnClick clear" id="clear-edit">Clear</button>
+        </div>
+    </div>
+    <div id="remove-section" style="display:none;">
+        <div class="container-textarea">
+            <input class="input-file" id="input-file-remove" type="file">
+            <div>
+                <h3 class="label">Input: &nbsp;<button id="remove">Click to Remove</button></h3>
+                <textarea class="text-remove" type="text" id="input" placeholder="Enter subs text here.."></textarea>
+            </div>
+            <div>
+                <h3 class="label">Ouput:</h3>
+                <textarea class="text-remove" type="text" id="output" placeholder="Result.."></textarea>
+            </div>
+            <button class="btnClick copy" id="copy">Copy</button>
+            <button class="btnClick clear" id="clear">Clear</button>
+        </div>
+    </div>
+    <div id="change-section" style="display:none;">
+        <div class="cont-change">
+            <input type="search" class="search-text" id="get-word" placeholder="Enter code: \an4 or \an5 or \an8 . .">&nbsp;
+            <button id="change">Click to Change</button>
+        </div>
+        <br>
+        <br>
+        <button id="info">Use of the Code ⓘ</button>
+	        <br>
+	        <br>
+        <input class="input-file" id="input-file-change" type="file">
+        <br>
+        <div class="container-textarea">
+            <div>
+                <h3 class="label">Input:</h3>
+                <textarea class="text-change" type="text" id="input-change" placeholder="Enter subs text here.."></textarea>
+            </div>
+            <div>
+                <h3 class="label">Ouput:</h3>
+                <textarea class="text-change" type="text" id="output-change" placeholder="Result.."></textarea>
+            </div>
+            <button class="btnClick copy" id="copy-change">Copy</button>
+            <button class="btnClick clear" id="clear-change">Clear</button>
+            <div id="usage-code">
+                <button id="close-div">&times;</button>
+                <br>
+                <small><b>This code is used to determine the position of the subtitle alignment text on the video.</b></small>
+                <br>
+                <br>
+                <span>
+				<b>Code and usage: &nbsp;<code>{\code}</code></b>
+				<br><br>
+				<li><b>\an1</b>&nbsp; › &nbsp;Bottom Left</li>
+				<li><b>\an3</b>&nbsp; › &nbsp;Bottom Right</li>
+				<li><b>\an4</b>&nbsp; › &nbsp;Middle Left</li>
+				<li><b>\an5</b>&nbsp; › &nbsp;Middle Center</li>
+				<li><b>\an6</b>&nbsp; › &nbsp;Middle Right</li>
+				<li><b>\an7</b>&nbsp; › &nbsp;Top Left</li>
+				<li><b>\an8</b>&nbsp; › &nbsp;Top Center</li>
+				<li><b>\an9</b>&nbsp; › &nbsp;Top Right</li>
+	         </div>
+		 </div>
+     </div>
+		
+		      <span id="tooltip">Copy to clipboard</span>
+		    
+	    <div class="footer">
+            <h5>&copy; 2023 &nbsp;<span style="font-weight:400;">SUBTOOLS</span></h5>
+        </div>
+        
+    <script>
+      const header=document.getElementById("top"),btnHome=document.getElementById("btn-home"),clickHome=document.getElementById("click-home"),logoHome=document.getElementById("logo-home"),homeSection=document.getElementById("home"),editSection=document.getElementById("edit-section"),removeSection=document.getElementById("remove-section"),changeSection=document.getElementById("change-section"),section=document.getElementById("section"),sectionContent=document.getElementById("section-content"),sectionTitle=document.getElementById("section-title"),contentDesc=document.getElementById("content-desc"),contentPr=document.getElementById("content-pr"),codeEdit=document.getElementById("code-edit"),codeRemove=document.getElementById("code-remove"),codeChange=document.getElementById("code-change"),sectionEdit=document.getElementById("section-edit"),sectionRemove=document.getElementById("section-remove"),sectionChange=document.getElementById("section-change"),sectionTitleRemove=document.getElementsByClassName("section-title-remove"),contentRemove=document.getElementsByClassName("content-remove"),tooltip=document.getElementById("tooltip"),sectionTrans=(window.onload=()=>homeSection.style.visibility="visible",window.onscroll=()=>header.style.opacity=500<window.scrollY?0:1,document.getElementById("section-translate")),inputEdit=(sectionTrans.addEventListener("click",function(){window.open("https://translate.google.com/","_blank","noopener noreferrer")}),btnHome.addEventListener("click",function(){setTimeout(function(){section.style.display="none",homeSection.style.display="flex",editSection.style.display="none",removeSection.style.display="none",changeSection.style.display="none",contentDesc.innerHTML="Home",codeEdit.style.display="none",codeRemove.style.display="none",codeChange.style.display="none",document.title="SubTools | Home"},500),setTimeout(function(){logoHome.style.visibility="visible",logoHome.style.opacity="1",clickHome.style.visibility="hidden",clickHome.style.opacity="0"},400)}),clickHome.addEventListener("click",function(){setTimeout(function(){section.style.display="none",homeSection.style.display="flex",editSection.style.display="none",removeSection.style.display="none",changeSection.style.display="none",contentDesc.innerHTML="Home",codeEdit.style.display="none",codeRemove.style.display="none",codeChange.style.display="none",document.title="SubTools | Home"},500),setTimeout(function(){logoHome.style.visibility="visible",logoHome.style.opacity="1",clickHome.style.visibility="hidden",clickHome.style.opacity="0"},300)}),document.getElementById("input-edit")),btnCopyEdit=document.getElementById("copy-edit"),btnClearEdit=document.getElementById("clear-edit"),inputFileEdit=document.getElementById("input-file-edit"),input=(sectionEdit.addEventListener("click",function(){setTimeout(function(){homeSection.style.display="none",section.style.display="block",editSection.style.display="block",sectionContent.textContent="Edit",sectionTitle.textContent="Subtitles/Captions",contentDesc.innerHTML="Support type:&nbsp; <i>All types</i>",codeEdit.style.display="inline-block",window.scrollTo("top",0),document.title="SubTools | Edit Subs/Caps",clickHome.style.visibility="visible",clickHome.style.opacity="1"},500),setTimeout(function(){logoHome.style.visibility="hidden",logoHome.style.opacity="0"},300)}),inputEdit.addEventListener("keyup",function(e){e&&(0===inputEdit.value.length?(btnCopyEdit.style.display="none",btnClearEdit.style.display="none"):(btnCopyEdit.style.display="block",btnClearEdit.style.display="block"))}),btnCopyEdit.addEventListener("click",function(){return setTimeout(function(){inputEdit.select(),document.execCommand("copy"),tooltip.style.visibility="visible",tooltip.style.opacity="1"},400),setTimeout(function(){tooltip.style.visibility="hidden",tooltip.style.opacity="0"},2800),!1}),btnClearEdit.addEventListener("click",function(){inputEdit.value="",inputFileEdit.value="",btnCopyEdit.style.display="none",btnClearEdit.style.display="none"}),inputFileEdit.addEventListener("change",function(e){const t=new FileReader;t.addEventListener("load",function(){inputEdit.value=t.result,console.log("File Name: "+e.target.files[0].name),0===inputEdit.value.length?(btnCopyEdit.style.display="none",btnClearEdit.style.display="none"):(btnCopyEdit.style.display="block",btnClearEdit.style.display="block")}),t.readAsText(this.files[0])}),document.getElementById("input")),output=document.getElementById("output"),btnCopy=document.getElementById("copy"),btnClear=document.getElementById("clear"),inputFile=document.getElementById("input-file-remove"),btnRemove=document.getElementById("remove"),inputChange=(sectionRemove.addEventListener("click",function(){setTimeout(function(){homeSection.style.display="none",section.style.display="block",removeSection.style.display="block",sectionContent.textContent="Remove",sectionTitle.textContent="Code",contentDesc.innerHTML="Support type:&nbsp; <i>SRT - VTT</i>",codeRemove.style.display="inline-block",window.scrollTo("top",0),document.title="SubTools | Remove Code",clickHome.style.visibility="visible",clickHome.style.opacity="1"},500),setTimeout(function(){logoHome.style.visibility="hidden",logoHome.style.opacity="0"},300)}),input.addEventListener("keyup",function(e){e&&(e=input.value.replace(/{\s*\.*?\S*}/g,""),output.value=e,0===output.value.length?(btnCopy.style.display="none",btnClear.style.display="none"):(btnCopy.style.display="block",btnClear.style.display="block"))}),output.addEventListener("keyup",function(e){e&&(0===output.value.length?(btnCopy.style.display="none",btnClear.style.display="none"):(btnCopy.style.display="block",btnClear.style.display="block"))}),btnCopy.addEventListener("click",function(){return setTimeout(function(){output.select(),document.execCommand("copy"),tooltip.style.visibility="visible",tooltip.style.opacity="1"},400),setTimeout(function(){tooltip.style.visibility="hidden",tooltip.style.opacity="0"},2800),!1}),btnClear.addEventListener("click",function(){input.value="",output.value="",inputFile.value="",btnCopy.style.display="none",btnClear.style.display="none"}),inputFile.addEventListener("change",function(n){const o=new FileReader;o.addEventListener("load",function(){input.value=o.result,btnRemove.style.display="inline-block",btnRemove.style.visibility="visible",btnRemove.style.opacity="1";var t,e=inputFile.value;t=e,[".srt",".vtt"].some(e=>t.endsWith(e))?console.log("File Name: "+n.target.files[0].name):(input.value="",inputFile.value="",btnRemove.style.display="none",btnRemove.style.visibility="hidden",btnRemove.style.opacity,alert("File type not supported! \n\n Please choose another. Valid file types (srt / vtt)."))}),o.readAsText(this.files[0])}),btnRemove.addEventListener("click",function(){var e=input.value.replace(/{\s*\.*?\S*}/g,""),e=(output.value=e,output.value);0===e.length?(btnCopy.style.display="none",btnClear.style.display="none"):(btnCopy.style.display="block",btnClear.style.display="block"),setTimeout(function(){btnRemove.style.display="none",btnRemove.style.visibility="hidden",btnRemove.style.opacity="0"},3e3)}),document.getElementById("input-change")),outputChange=document.getElementById("output-change"),btnCopyChange=document.getElementById("copy-change"),btnClearChange=document.getElementById("clear-change"),inputFileChange=document.getElementById("input-file-change"),getWord=document.getElementById("get-word"),btnChange=document.getElementById("change"),openInfo=(sectionChange.addEventListener("click",function(){setTimeout(function(){homeSection.style.display="none",section.style.display="block",changeSection.style.display="block",sectionContent.textContent="Change",sectionTitle.textContent="Code",contentDesc.innerHTML="Support type:&nbsp; <i>SRT - VTT</i>",codeChange.style.display="inline-block",window.scrollTo("top",0),document.title="SubTools | Change Code",clickHome.style.visibility="visible",clickHome.style.opacity="1"},500),setTimeout(function(){logoHome.style.visibility="hidden",logoHome.style.opacity="0"},300)}),btnCopyChange.addEventListener("click",function(){return setTimeout(function(){outputChange.select(),document.execCommand("copy"),tooltip.style.visibility="visible",tooltip.style.opacity="1"},400),setTimeout(function(){tooltip.style.visibility="hidden",tooltip.style.opacity="0"},2800),!1}),btnClearChange.addEventListener("click",function(){inputChange.value="",outputChange.value="",inputFileChange.value="",btnCopyChange.style.display="none",btnClearChange.style.display="none"}),inputFileChange.addEventListener("change",function(n){const o=new FileReader;o.addEventListener("load",function(){inputChange.value=o.result;var t,e=inputFileChange.value,e=(t=e,[".srt",".vtt"].some(e=>t.endsWith(e))?console.log("File Name: "+n.target.files[0].name):(inputChange.value="",inputFileChange.value="",alert("File type not supported! \n\n Please choose another. Valid file types (srt / vtt).")),inputChange.value);0===e.length?btnClearChange.style.display="none":btnClearChange.style.display="block"}),o.readAsText(this.files[0])}),btnChange.addEventListener("click",function(){var e=getWord.value,t=inputChange.value,n=e.match(/\an1/g),o=e.match(/\an3/g),i=e.match(/\an4/g),l=e.match(/\an5/g),s=e.match(/\an6/g),c=e.match(/\an7/g),d=e.match(/\an8/g),a=e.match(/\an9/g),y=t.replace(/{\s*\.*?\S*}/g,"{"+e+"}"),n=(n||o||i||l||s||c||d||a?outputChange.value=y:(outputChange.value="Invalid code! Please enter the correct code..",outputChange.style.color="red",setTimeout(function(){outputChange.value="",outputChange.style.color="dodgerblue"},6e3)),0===e.length&&(outputChange.value=""),0===t.length&&(inputChange.value="Please enter subs text here..",inputChange.style.color="red",setTimeout(function(){inputChange.value="",inputChange.style.color="#000"},4e3)),outputChange.value);return 0===n.length?(outputChange.value="",btnCopyChange.style.display="none"):btnCopyChange.style.display="block",!1}),inputChange.addEventListener("keyup",function(e){e&&(0===inputChange.value.length?btnClearChange.style.display="none":btnClearChange.style.display="block")}),document.getElementById("info")),closeInfo=document.getElementById("close-div"),elementDiv=document.getElementById("usage-code"),docBody=document.body;openInfo.addEventListener("click",function(){elementDiv.style.visibility="visible",elementDiv.style.opacity="1",docBody.style.overflow="hidden"}),closeInfo.addEventListener("click",function(){elementDiv.style.visibility="hidden",elementDiv.style.opacity="0",docBody.style.overflow="auto"}),navigator.clipboard?console.log("Clipboard: Support."):console.log("Clipboard: Not Support.");
+    </script>
+    
+</body>
+</html>
